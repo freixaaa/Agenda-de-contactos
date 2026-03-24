@@ -26,7 +26,7 @@ while True:
     print("6. mostrar todos los contactos")
 
     opcion = input()
-    
+
     if opcion.lower() == "finalizar":
         break
 
@@ -60,12 +60,12 @@ while True:
             guardar_csv(ag.ruta, ag.contactos)
 
     elif opcion == "3":
-        texto = input()
+        texto = input("buscar nombre: ")
         resultados = ag.buscar_nombre(texto)
         mostrar_contactos(resultados)
 
     elif opcion == "4":
-        texto = input()
+        texto = input("buscar telefono: ")
         resultados = ag.buscar_telefono(texto)
         mostrar_contactos(resultados)
 
@@ -76,4 +76,4 @@ while True:
         mostrar_contactos(ag.mostrar())
 
     print()
-    print("escriba finalizar para salir")
+    print("escriba 'finalizar' si desea salir del programa")print()print("'escriba finalizar' si desea salir del programa")
