@@ -76,4 +76,4 @@ while True:
         mostrar_contactos(ag.mostrar())
 
     print()
-    print("escriba 'finalizar' si desea salir del programa")print()print("'escriba finalizar' si desea salir del programa")
+    print("escriba 'finalizar' si desea salir del programa")
