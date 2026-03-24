@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from servicios.agenda import agenda
 from servicios.archivo_json import cargar_json, guardar_json
 from servicios.archivo_csv import cargar_csv, guardar_csv
