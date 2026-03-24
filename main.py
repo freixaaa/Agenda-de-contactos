@@ -77,3 +77,4 @@ while True:
 
     print()
     print("escriba 'finalizar' si desea salir del programa")
+    print()
