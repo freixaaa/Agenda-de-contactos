@@ -8,11 +8,20 @@ from servicios.archivo_csv import cargar_csv, guardar_csv
 
 def mostrar_contactos(lista):
     for c in lista:
-        print(f"nombre: {c.nombre}")
-        print(f"telefono: {c.telefono}")
-        print(f"email: {c.email}")
-        print(f"edad: {c.edad}")
-        print(f"residencia: {c.residencia}")
+        if c.nombre:
+            print(f"nombre: {c.nombre}")
+        if c.telefono:
+            print(f"telefono: {c.telefono}")
+        if c.email:
+            print(f"email: {c.email}")
+        if c.residencia:
+            print(f"residencia: {c.residencia}")
+        if c.salario:
+            print(f"salario: {c.salario}")
+        if c.peso:
+            print(f"peso: {c.peso}")
+        if c.edad:
+            print(f"edad: {c.edad}")
         print()
 
 ag = agenda()
@@ -46,13 +55,16 @@ while True:
             ag.tipo = "csv"
 
     elif opcion == "2":
+        print("ingrese los datos disponibles")
         nombre = input("nombre: ")
-        telefono = input("telefono: ")
-        email = input("email: ")
+        telefono = input("telefono (opcional): ")
+        email = input("email (opcional): ")
         edad = input("edad: ")
-        residencia = input("residencia: ")
+        residencia = input("residencia (opcional): ")
+        salario = input("salario (opcional): ")
+        peso = input("peso (opcional): ")
 
-        ag.agregar(nombre, telefono, email, edad, residencia)
+        ag.agregar(nombre, telefono, email, edad, residencia, salario, peso)
 
         if ag.tipo == "json":
             guardar_json(ag.ruta, ag.contactos)
